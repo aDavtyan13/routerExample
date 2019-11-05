@@ -1,0 +1,19 @@
+table{
+    border: 1px solid black;
+    text-align: center;
+}
+
+td{
+    border: 1px solid black;
+    padding: 11px;
+}
+th{
+    border: 1px solid black;
+    padding: 11px;
+}
+a{
+    
+    color: black;
+    font-weight: 600;
+
+}

@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr (click)="onId(data)" *ngFor="let data of datas">
+            <td>{{ data.id }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.surname }}</td>
+            <td>{{ data.age }}</td>
+            <td><button >View</button></td>
+            <!-- <td><button (click)="check(log.value, pass.value)">View</button></td> -->
+
+        
+        </tr>
+    </tbody>
+</table>

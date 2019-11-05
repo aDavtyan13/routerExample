@@ -1,0 +1,41 @@
+form{
+    width: 30%;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 37px;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    margin: 27px 0;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+    margin: 27px 0;
+}
+
+input:focus{
+    outline: none;
+}
+label{
+    font-weight: 500;
+    font-size: 21px;
+}
+button{
+    padding: 7px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.9s;
+}
+input{
+    margin-top: 4px;
+    border: 2px solid black;
+}
