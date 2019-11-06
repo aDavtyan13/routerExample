@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
-import { MyserviceService } from '../myservice.service';
 
 
 @Component({
   selector: 'data-section',
   templateUrl: './data-section.component.html',
-  styleUrls: ['./data-section.component.css'],
-  providers:[MyserviceService]
+  styleUrls: ['./data-section.component.css']
 })
 export class DataSectionComponent implements OnInit {
 
@@ -34,12 +32,12 @@ export class DataSectionComponent implements OnInit {
   // }
 
 
-  constructor(private service : MyserviceService , private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   onId(data){
-    this.router.navigate(['/selected',data.id]);
+    this.router.navigate(['/user',data.id]);
   }
 }

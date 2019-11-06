@@ -1,23 +1,19 @@
-<form [formGroup]="loginPage">
-
-        <!-- (submit)="onSubmit(loginPage)" -->
+<form [formGroup]="loginPage" (ngSubmit)="onSubmit()">
 
 
-
-    <div class="login">
-        <label for="login">Login</label>
-        <input type="text" id="login" #log formControlName="login">
+    <div class="username">
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username">
     </div>
 
     <div class="password">
         <label for="password">Password</label>
-        <input type="text" id="password" #pass formControlName="password">
+        <input type="password" id="password"  formControlName="password">
     </div>
 
 
     <div class="submit">
-        <!-- <button [routerLink]="['/users']">Login</button> -->
-        <button (click)="check(log.value, pass.value)">Login</button>
+        <button type="submit">Login</button>
     </div>
 
 </form>

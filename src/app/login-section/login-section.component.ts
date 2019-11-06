@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {  FormBuilder } from '@angular/forms';
+import {  FormBuilder, Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
-import { MyserviceService } from '../myservice.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+
 
 
 @Component({
   selector: 'login-section',
   templateUrl: './login-section.component.html',
-  styleUrls: ['./login-section.component.css'],
-  providers: [MyserviceService]
+  styleUrls: ['./login-section.component.css']
 })
 export class LoginSectionComponent implements OnInit {
 
@@ -17,30 +16,36 @@ export class LoginSectionComponent implements OnInit {
 
   public dam;
 
-  constructor(public fb:FormBuilder,private service : MyserviceService , private routes: Router) { }
+  constructor(public fb:FormBuilder,private router: Router) { }
 
   ngOnInit() {
     this.loginPage=this.fb.group({
-      login:[''],
-      password:['']
+      username:['',Validators.required],
+      password:['',Validators.required]
 
     })
   }
 
-  check(uname: string, p : string)
-  {
-    var output = this.service.checkNamePass(uname, p);
-    
-    if(output == true)
-    {
-      this.routes.navigate(['/users']);
+  
+
+  onSubmit(){
+    if(this.loginPage.valid){
+      if((this.loginPage.value.username=="admin" && this.loginPage.value.password=="admin") ||
+      (this.loginPage.value.username=="demo"&& this.loginPage.value.password=="demo")){
+
+        localStorage.setItem('username', this.loginPage.value.username);
+        this.router.navigate(['/users']);
+      }
+      else{
+        localStorage.setItem('username',this.loginPage.value.username);
+        this.router.navigate(['/users']);
+      }
     }
-    else{
-      alert('daaaaaaaaa');
-    }
+
   }
 
  
   
+  // [routerLink]="['/users']"
 
 }

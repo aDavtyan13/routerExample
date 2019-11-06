@@ -9,8 +9,7 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { DataSectionComponent } from './data-section/data-section.component';
 import { SelectedUserComponent } from './selected-user/selected-user.component';
-import { AuthGuard } from './auth.guard';
-import { UserIdComponent } from './user-id/user-id.component';
+import { LastPageComponent } from './last-page/last-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,7 @@ import { UserIdComponent } from './user-id/user-id.component';
     LoginSectionComponent,
     DataSectionComponent,
     SelectedUserComponent,
-    UserIdComponent
+    LastPageComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,7 @@ import { UserIdComponent } from './user-id/user-id.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthGuard],
+  providers:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

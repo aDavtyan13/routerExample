@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserIdComponent } from './user-id.component';
+import { LastPageComponent } from './last-page.component';
 
-describe('UserIdComponent', () => {
-  let component: UserIdComponent;
-  let fixture: ComponentFixture<UserIdComponent>;
+describe('LastPageComponent', () => {
+  let component: LastPageComponent;
+  let fixture: ComponentFixture<LastPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserIdComponent ]
+      declarations: [ LastPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserIdComponent);
+    fixture = TestBed.createComponent(LastPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
